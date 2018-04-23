@@ -26,3 +26,28 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.result-title {
+  margin: 30px 228px 14px 0;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.search-button {
+  margin: 22px 0 0 0;
+}
+
+.search-row {
+  margin: 13px;
+}
+
+.result-error {
+  margin: 30px 228px 14px 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+}
+
+.length-error {
+  color: red;
+}
