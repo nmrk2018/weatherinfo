@@ -24,11 +24,11 @@ export default function(state = initialState, action) {
         return {
             ...state,
             name: action.payload.name,
-            date: new Date(action.payload.dt).toLocaleDateString(),
+            date: new Date(action.payload.dt*1000).toLocaleDateString(),
             humidity: action.payload.main.humidity,
-            temp: action.payload.main.temp,
-            temp_max: action.payload.main.temp_max,
-            temp_min: action.payload.main.temp_min,
+            temp: (action.payload.main.temp-273.15),
+            temp_max: (action.payload.main.temp_max-273.15),
+            temp_min: (action.payload.main.temp_min-273.15),
             error: ""
         }
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class Result extends Component {
@@ -34,19 +34,19 @@ class Result extends Component {
                     </Row>
                     <Row className="show-grid">
                         <Col md={2}>Current Temp :</Col>
-                        <Col md={2}>{temp}</Col>
+                        <Col md={2}>{Math.round(temp)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
                         <Col md={2}>Low Temp :</Col>
-                        <Col md={2}>{temp_min}</Col>
+                        <Col md={2}>{Math.round(temp_min)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
                         <Col md={2}>High Temp :</Col>
-                        <Col md={2}>{temp_max}</Col>
+                        <Col md={2}>{Math.round(temp_max)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
                         <Col md={2}>Humidity :</Col>
-                        <Col md={2}>{humidity}</Col>
+                        <Col md={2}>{Math.round(humidity)} %</Col>
                     </Row>
                     <Row className="show-grid">
                         <Col md={2}>City/State :</Col>

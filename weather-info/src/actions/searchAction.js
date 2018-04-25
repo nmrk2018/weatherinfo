@@ -1,4 +1,4 @@
-import { FETCH_SEARCH_DATA, SHARE_INPUT_SEARCH_DATA } from './types';
+import { FETCH_SEARCH_DATA } from './types';
 import axios from 'axios';
 
 const APIKEY = 'a3e9acbd79bf43fa9166149b247ef164'
