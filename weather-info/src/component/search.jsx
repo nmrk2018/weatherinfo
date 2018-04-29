@@ -43,22 +43,22 @@ class Search extends Component {
     }
     render() {
         return (
-            <div className="container">
+            <div className="search-container">
                 <Row className="show-grid">
-                    <Col md={3}>Please Enter Zip Code :</Col>
-                    <Col md={2}> <input type="text" name="zip" value={this.state.zip} onChange={this.onChange} /></Col>
-                    <Col md={3} className="length-error">{this.state.zipLength}</Col>
+                    <Col xs={12} sm={6}>Please Enter Zip Code :</Col>
+                    <Col xs={12} sm={6}> <input type="text" name="zip" value={this.state.zip} onChange={this.onChange} /></Col>
+                    <Col xs={12} className="length-error">{this.state.zipLength}</Col>
                 </Row>
                 <Row className="show-grid search-row">
-                    <Col md={4}>- OR -</Col>
+                    <Col xs={12}>- OR -</Col>
                 </Row>
                 <Row className="show-grid">
-                    <Col md={3}> Please Enter City Name</Col>
-                    <Col md={2}> <input type="text" name="city" value={this.state.city} onChange={this.onChange} /></Col>
-                    <Col md={3} className="length-error">{this.state.cityLength}</Col>
+                    <Col xs={12} sm={6}> Please Enter City Name</Col>
+                    <Col xs={12} sm={6}> <input type="text" name="city" value={this.state.city} onChange={this.onChange} /></Col>
+                    <Col xs={12} className="length-error">{this.state.cityLength}</Col>
                 </Row>
-                <Row className="show-grid">
-                <Col md={6}>
+                <Row className="show-grid"> 
+                <Col xs={12}>
                 <Button bsStyle="primary" className="search-button" onClick={this.getWeather}>Get Weather</Button>
                 </Col>
                 </Row>

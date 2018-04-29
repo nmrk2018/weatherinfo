@@ -11,7 +11,7 @@ class Result extends Component {
             return (
                 <Row className="show-grid result-error">
                     <Col>
-                        <p >City not found, Please Enter a correct City name or Zip Code</p>
+                        City not found, Please Enter a correct City name or Zip Code
                     </Col>
                 </Row>
             )
@@ -22,36 +22,38 @@ class Result extends Component {
 
         else {
             return (
-                <div className="container">
-                    <Row className="show-grid result-title">
-                        <Col md={8}>
-                            <p >Please find below weather information of {name}</p>
-                        </Col>
+                <div>
+                <Row className="show-grid result-title">
+                <Col md={8}>
+                    <p >Please find below weather information of {name}</p>
+                </Col>
+                </Row>
+                <div className="result-container">
+                    <Row className="show-grid">
+                        <Col xs={6} className="result-label text-left">Date :</Col>
+                        <Col xs={6} className="result-value text-left">{date}</Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col md={2}>Date :</Col>
-                        <Col md={2}>{date}</Col>
+                        <Col xs={6} className="result-label text-left">Current Temp :</Col>
+                        <Col xs={6} className="result-value text-left">{Math.round(temp)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col md={2}>Current Temp :</Col>
-                        <Col md={2}>{Math.round(temp)} &#8451;</Col>
+                        <Col xs={6} className="result-label text-left">Low Temp :</Col>
+                        <Col xs={6} className="result-value text-left">{Math.round(temp_min)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col md={2}>Low Temp :</Col>
-                        <Col md={2}>{Math.round(temp_min)} &#8451;</Col>
+                        <Col xs={6} className="result-label text-left">High Temp :</Col>
+                        <Col xs={6} className="result-value text-left">{Math.round(temp_max)} &#8451;</Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col md={2}>High Temp :</Col>
-                        <Col md={2}>{Math.round(temp_max)} &#8451;</Col>
+                        <Col xs={6} className="result-label text-left">Humidity :</Col>
+                        <Col xs={6} className="result-value text-left">{Math.round(humidity)} %</Col>
                     </Row>
                     <Row className="show-grid">
-                        <Col md={2}>Humidity :</Col>
-                        <Col md={2}>{Math.round(humidity)} %</Col>
+                        <Col xs={6} className="result-label text-left">City/State :</Col>
+                        <Col xs={6} className="result-value text-left">{name}</Col>
                     </Row>
-                    <Row className="show-grid">
-                        <Col md={2}>City/State :</Col>
-                        <Col md={2}>{name}</Col>
-                    </Row>
+                </div>
                 </div>
             )
         }
